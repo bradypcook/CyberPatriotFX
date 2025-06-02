@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: 'Inter';
+    background-color: #0a0a0a;
+    color: white;
+}
+.navbar {
+    background-color: #003366;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+.main {
+    padding: 2rem;
+    background-color: #1a1a1a;
+    min-height: 100vh;
+}
+.main h1 {
+    text-align: center;
+    background-color: #2f2f37;
+}
+.main p {
+    text-align: center;
+    background-color: #2f2f37;
+}
+
+/* Grid for the buttons */
+.soundboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* The different button styles */
+.gain-sound {
+    background-color: #18d748;
+    color: white;
+    font-family: 'Inter';
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.gain-sound:hover {
+    background-color: #13b63c;
+}
+.gain-sound:active {
+    background-color: #1fee5e;
+}
+.gong-sound {
+    background-color: #b48aff;
+    color: white;
+    font-family: 'Inter';
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.gong-sound:hover {
+    background-color: #a06ce9;
+}
+.gong-sound:active {
+    background-color: #8b55d4;
+}
+.siren-sound {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Inter';
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.siren-sound:hover {
+    background-color: #5a9bd8;
+}
+.siren-sound:active {
+    background-color: #36648b;
+}
+.alarm-sound {
+    background-color: #e03813;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Inter';
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.alarm-sound:hover {
+    background-color: #fa4b23;
+}
+.alarm-sound:active {
+    background-color: #b72e0f;
+}
+.horn-sound {
+    background-color: #F2740B;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Inter';
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.horn-sound:hover {
+    background-color: #ff8f1f
+}
+.horn-sound:active {
+    background-color: #c45c09;
+}
+/*Styling for both of the sections*/
+.sound-section,
+.info-section {
+    background-color: #2f2f37;
+    align-items: center;
+    border-radius: 10px; 
+    padding: 1.2rem;        
+    margin-bottom: 1.2rem;  
+    box-sizing: border-box; 
+}
+.info-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}

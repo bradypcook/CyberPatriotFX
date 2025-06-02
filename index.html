@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPatriotFX</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/cyberpatriot_icon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Alt Font #1: Poppins: <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> -->
+    <!-- Alt Font #2: Roboto Condensed: <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>CyberPatriotFX</h1>
+    </header>
+
+    <main class="main">
+        <!-- Top Area: Buttons Section -->
+        <section class="sound-section">
+            <h1>CyberPatriot Sound Effects</h1>
+            <section class="soundboard">
+                <button class="gain-sound">Gain Sound</button>
+                <button class="alarm-sound">Alarm Sound</button>
+                <button class="gong-sound">Gong Sound</button>
+                <button class="siren-sound">Siren Sound</button>
+                <button class="horn-sound">Horn Sound</button>
+            </section>
+            <script>
+                const sounds = {
+                    'gain-sound': 'assets/sound_files/gain.wav',
+                    'alarm-sound': 'assets/sound_files/alarm.wav',
+                    'gong-sound': 'assets/sound_files/gong.wav',
+                    'siren-sound': 'assets/sound_files/siren.wav',
+                    'horn-sound': 'assets/sound_files/horn.wav'
+                };
+
+                Object.keys(sounds).forEach(className => {
+                    document.querySelector(`.${className}`).addEventListener('click', () => {
+                        const audio = new Audio(sounds[className]);
+                        audio.play();
+                    });
+                });
+            </script>
+        </section>
+
+        <section class="info-section">
+            <h1>What is CyberPatriot (and what do these sounds mean)?</h1>
+            <img src="assets/images/cyberpatriot_logo.png"  style="display: block; margin: 0 auto;"/>
+            <p>
+                CyberPatriot is a cybersecurity competition hosted by the Air Force Association
+                that revolves around competitors having to fix network vulnerabilities and harden virtual machines.
+            </p>
+
+            <br>
+
+            <h2 style="text-align: center;">Sound Effect Descriptions</h2>
+            <p>
+                <strong> Gain Sound</strong> - Occurs when a vulnerability is found/patched by the competitor.  
+                <br><br>
+                <strong> Alarm Sound</strong>  - Occurs when competitors get a deduction in points.  
+                <br><br>
+                <strong> Gong Sound</strong>  -  When a significant event (configuration chagne, critical system event, etc.) occurs during the competition.
+                <br><br>
+                <strong> Siren Sound</strong>  - Occurs when multiple copies of the same VM/image are open at once (often during practice rounds).  
+                <br><br>
+                <strong> Horn Sound</strong>  -  Serves as an error notification within the competition (such as misconfigurations, etc.).
+            </p>
+        </section>
+    </main>
+</body>
+</html>
